@@ -1,0 +1,5 @@
+mvn clean -f "d:\product-service\pom.xml"
+
+mvn clean -f "c:\Users\Akmal G\Documents\Pribadi\Sekolah\Kuliah\Tugas\Semester 6\PLBO\product-service\pom.xml"
+mvn verify -f "c:\Users\Akmal G\Documents\Pribadi\Sekolah\Kuliah\Tugas\Semester 6\PLBO\product-service\pom.xml"
+
