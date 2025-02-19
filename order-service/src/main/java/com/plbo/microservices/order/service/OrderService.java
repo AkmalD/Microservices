@@ -4,6 +4,8 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
+import org.springframework.beans.factory.annotation.Value;
+import jakarta.annotation.PostConstruct;
 import com.plbo.microservices.order.client.InventoryClient;
 import com.plbo.microservices.order.dto.OrderRequest;
 import com.plbo.microservices.order.model.Order;
@@ -17,6 +19,17 @@ public class OrderService {
 
     private final OrderRepository orderRepository;
     private final InventoryClient inventoryClient;
+
+
+    @Value("${inventory.url}")
+    private String inventoryUrl;
+
+    @PostConstruct
+    public void printConfig() {
+        System.out.println("Inventory URL: " + inventoryUrl);
+    }
+
+
 
     public void placeOrder(OrderRequest orderRequest){
 

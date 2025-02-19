@@ -22,6 +22,7 @@ class OrderServiceApplicationTests {
 	static MySQLContainer<?> mySQLContainer = new MySQLContainer<>("mysql:8.1.0");
 	@LocalServerPort
 	private Integer port;
+	
 
 	@BeforeEach
 	void setup() {
